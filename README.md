@@ -5,7 +5,7 @@ Concept-level web app for a healthcare NGO/community team.
 ## Submission Links
 
 - GitHub: https://github.com/Akhil4007-cpu/jarurat-care
-- Live Hosted: PASTE_YOUR_NETLIFY_LIVE_LINK_HERE
+- Live Hosted: https://jarurat1.netlify.app/
 
 ## What it does
 
