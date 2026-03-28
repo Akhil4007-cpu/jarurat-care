@@ -2,6 +2,11 @@
 
 Concept-level web app for a healthcare NGO/community team.
 
+## Submission Links
+
+- GitHub: https://github.com/Akhil4007-cpu/jarurat-care
+- Live Hosted: PASTE_YOUR_NETLIFY_LIVE_LINK_HERE
+
 ## What it does
 
 - **Patient Support Form**: patients submit a support request + urgency.
@@ -31,5 +36,5 @@ When a user message contains a keyword, it returns the matching guidance. This r
 
 ## Deploy (Vercel / Netlify)
 
-- **Vercel**: Import the GitHub repo in Vercel and deploy.
-- **Netlify**: New site from Git → select repo → deploy.
+- **Netlify (recommended)**: New site from Git → select repo → Publish directory `.` → deploy.
+- **Vercel (optional)**: Import the GitHub repo in Vercel and deploy.
