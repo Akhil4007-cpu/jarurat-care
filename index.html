@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarurat Care - Healthcare Support</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav">
+                <div class="logo">
+                    <h1>🏥 Jarurat Care</h1>
+                </div>
+                <nav class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#support">Support</a>
+                    <a href="#volunteer">Volunteer</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Healthcare Support for Everyone</h2>
+                    <p>Connecting patients with volunteers and providing essential healthcare resources</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showForm('patient')">Get Support</button>
+                        <button class="btn btn-secondary" onclick="showForm('volunteer')">Become a Volunteer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="support" class="forms-section">
+            <div class="container">
+                <!-- Patient Support Form -->
+                <div id="patient-form" class="form-container hidden">
+                    <div class="form-card">
+                        <h3>Patient Support Request</h3>
+                        <form id="patientSupportForm">
+                            <div class="form-group">
+                                <label for="patient-name">Full Name *</label>
+                                <input type="text" id="patient-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="patient-email">Email *</label>
+                                <input type="email" id="patient-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="patient-phone">Phone Number *</label>
+                                <input type="tel" id="patient-phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="patient-age">Age</label>
+                                <input type="number" id="patient-age" name="age" min="1" max="120">
+                            </div>
+                            <div class="form-group">
+                                <label for="patient-condition">Medical Condition/Support Needed *</label>
+                                <textarea id="patient-condition" name="condition" rows="4" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="patient-urgency">Urgency Level</label>
+                                <select id="patient-urgency" name="urgency">
+                                    <option value="low">Low - General support</option>
+                                    <option value="medium">Medium - Need assistance soon</option>
+                                    <option value="high">High - Urgent help needed</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Support Request</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Volunteer Registration Form -->
+                <div id="volunteer-form" class="form-container hidden">
+                    <div class="form-card">
+                        <h3>Volunteer Registration</h3>
+                        <form id="volunteerForm">
+                            <div class="form-group">
+                                <label for="volunteer-name">Full Name *</label>
+                                <input type="text" id="volunteer-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="volunteer-email">Email *</label>
+                                <input type="email" id="volunteer-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="volunteer-phone">Phone Number *</label>
+                                <input type="tel" id="volunteer-phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="volunteer-skills">Skills/Expertise *</label>
+                                <textarea id="volunteer-skills" name="skills" rows="3" placeholder="e.g., Medical background, Counseling, Transportation, etc." required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="volunteer-availability">Availability *</label>
+                                <select id="volunteer-availability" name="availability" required>
+                                    <option value="">Select availability</option>
+                                    <option value="weekdays">Weekdays</option>
+                                    <option value="weekends">Weekends</option>
+                                    <option value="evenings">Evenings</option>
+                                    <option value="flexible">Flexible</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="volunteer-motivation">Why do you want to volunteer?</label>
+                                <textarea id="volunteer-motivation" name="motivation" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Register as Volunteer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Chatbot Section -->
+        <section class="chatbot-section">
+            <div class="container">
+                <div class="chatbot-container">
+                    <div class="chatbot-header">
+                        <h3>🤖 Healthcare Assistant</h3>
+                        <p>Ask me about common healthcare questions and resources</p>
+                    </div>
+                    <div class="chatbot-messages" id="chatMessages">
+                        <div class="message bot-message">
+                            Hello! I'm your healthcare assistant. I can help you with information about:
+                            <br>• Common health conditions
+                            <br>• Finding local healthcare resources
+                            <br>• General wellness tips
+                            <br>• How to get medical help
+                            <br><br>What would you like to know?
+                        </div>
+                    </div>
+                    <div class="chatbot-input">
+                        <input type="text" id="chatInput" placeholder="Type your question here..." onkeypress="handleChatKeyPress(event)">
+                        <button onclick="sendMessage()" class="btn btn-primary">Send</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Jarurat Care. Healthcare support platform for communities in need.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

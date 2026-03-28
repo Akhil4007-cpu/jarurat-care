@@ -1,0 +1,36 @@
+{
+  "name": "jarurat-care",
+  "version": "1.0.0",
+  "description": "Healthcare Support Web App - Connecting patients with volunteers and AI-powered health assistance",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000 || npx serve .",
+    "dev": "python -m http.server 8000 || npx serve .",
+    "build": "echo 'No build step needed for static site'",
+    "deploy": "echo 'Deploy to your preferred hosting platform'"
+  },
+  "keywords": [
+    "healthcare",
+    "support",
+    "volunteer",
+    "patient",
+    "chatbot",
+    "ai",
+    "medical",
+    "community",
+    "ngo"
+  ],
+  "author": "Healthcare Support Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/jarurat-care.git"
+  },
+  "homepage": "https://your-app.vercel.app",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

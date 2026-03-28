@@ -1,0 +1,17 @@
+[build]
+  publish = "."
+  command = "echo 'No build needed for static site'"
+
+[build.environment]
+  NODE_VERSION = "16"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production]
+  command = "echo 'Deploying production version'"
+
+[context.deploy-preview]
+  command = "echo 'Deploying preview version'"
